@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapp {
+  min-width: 200px;
+  max-width: 650px;
+  margin: auto;
+}
+
+.header {
+  color: rgba(0, 0, 0, 0.6);
+  text-align: right;
+  font-size: 18px;
+  height: 30px;
+}
+
+.tasks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-top: 10px;
+}
+
+.task__message {
+  font-family: MS Sans Serif;
+  padding-left: 10px;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.task__message:hover {
+  color: black;
+}
+
+.create_task {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr auto;
+      grid-template-columns: 1fr auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.create_task__inp {
+  font-size: 28px;
+  min-width: 160px;
+  border-color: rgba(255, 255, 255, 0);
+  outline: none;
+  padding-left: 5px;
+  padding-right: 5px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-animation: bord  .5s 1 linear;
+          animation: bord  .5s 1 linear;
+}
+
+@-webkit-keyframes bord {
+  from {
+    border-color: rgba(81, 70, 175, 0.3);
+  }
+  to {
+    border-color: rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes bord {
+  from {
+    border-color: rgba(81, 70, 175, 0.3);
+  }
+  to {
+    border-color: rgba(255, 255, 255, 0);
+  }
+}
+
+.create_btn {
+  border-radius: 30px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  margin-right: 10px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.create_btn:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.del_btn {
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  padding-right: 5px;
+  padding-right: 5px;
+  margin-right: 10px;
+}
+
+.del_btn:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.err_mes {
+  color: red;
+  font-size: 20px;
+}
+
+.inpErr {
+  border-color: rgba(248, 12, 12, 0.5);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+/*# sourceMappingURL=style.css.map */

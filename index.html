@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ToDo на Vue</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+
+<body>
+    <div id="app" class="wrapp">
+        <div class="header">
+            <p id="title"> {{"текущих задач: " + tasks.length}} </p>
+        </div>
+
+        <div class="create_task">
+            <input v-model="input_text" @keyup.enter="add_task()" type="text" :class="{inpErr: errActive}"
+                class="create_task__inp" autofocus placeholder="Опиши задачу">
+            <button @click="add_task()" class="create_btn">✔️</button>
+        </div>
+
+        <div class="err_mes" v-model="error_mess">{{error_mess}}</div>
+
+        <view-task @done-task="del_task(i)" :task="task.item" v-for="(task, i) in tasks" :key="i"></view-task>
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
